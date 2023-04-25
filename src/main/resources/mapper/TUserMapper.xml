@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.customermanagement.mapper.TUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.customermanagement.entity.TUser">
+            <id property="uid" column="uid" jdbcType="INTEGER"/>
+            <result property="uname" column="uname" jdbcType="VARCHAR"/>
+            <result property="uaccount" column="uaccount" jdbcType="VARCHAR"/>
+            <result property="upass" column="upass" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="remake" column="remake" jdbcType="VARCHAR"/>
+            <result property="remake1" column="remake1" jdbcType="VARCHAR"/>
+            <result property="remake2" column="remake2" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,uname,uaccount,
+        upass,email,phone,
+        remake,remake1,remake2
+    </sql>
+</mapper>

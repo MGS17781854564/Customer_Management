@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.customermanagement.mapper.TCarMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.customermanagement.entity.TCar">
+            <id property="cid" column="cid" jdbcType="INTEGER"/>
+            <result property="cnumber" column="cnumber" jdbcType="VARCHAR"/>
+            <result property="remake" column="remake" jdbcType="VARCHAR"/>
+            <result property="remake1" column="remake1" jdbcType="VARCHAR"/>
+            <result property="remake2" column="remake2" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        cid,cnumber,remake,
+        remake1,remake2
+    </sql>
+</mapper>
