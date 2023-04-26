@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/freight?useUnicode=true&useSSL=false&characterEncoding=utf8
+    username: root
+    password: Maogangsen520.
+
+  auto:
+    #   配置是否自动打开浏览器
+    openurl: true
+  web:
+    #   本机浏览器的.exe文件地址
+    googleexcute: C:\Program Files\Google\Chrome\Application\\chrome.exe
+#    edge: C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+    #   自动打开的url地址
+    loginurl: http://localhost:8080/doc.html
+
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    prefix: classpath:/templates/
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  type-aliases-package: com/example/ims/entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    #
+    tags-sorter: alpha
+    operations-sorter: alpha
+  # api位置
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'default'
+      paths-to-match: '/**'
+      # Scan your controller package.
+      packages-to-scan: com.example.customermanagement.controller
