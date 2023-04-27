@@ -19,6 +19,7 @@ public class Log4j2Application {
         logger.warn(" warn level ");
         logger.error(" error level ");
         logger.fatal(" fatal level ");
+        System.out.println("测试");
     }
 }
 
